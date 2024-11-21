@@ -1,8 +1,8 @@
 import React from 'react'
 import Card from './Card'
-import Features from '../components/Features';
-import Details from '../components/Details'
-import FutureSection from './FutureSection';
+import Features from './Features';
+import Details from './Details';
+import FutureSection from './FutureSection'
 
 function Body() {
     let cardData = [
@@ -24,8 +24,11 @@ function Body() {
     ];
 
   return (
-    <div className='bg-black w-full min-h-full overflow-hidden'>
-          <div className='min-h-20 border border-l-[#cacaca33]'></div>
+    <div className='bg-black w-full min-h-full'>
+          <div className="min-h-36 flex items-center justify-center">
+              <div className="opacity-75 bg-gradient-to-r from-transparent via-[#ffecc8] to-transparent h-[1px] w-full">
+              </div>
+          </div>
        <div className='grid grid-cols-2 p-5 gap-4 mt-3'>
         <div className='p-2 text-white'>
                   <div className='w-60 h-16 items-center border border-[#fff3] pt-5 rounded-full mb-2'>

@@ -24,8 +24,8 @@ function Features() {
     const handleMouseMove = (e, index) => {
         if (hoveredIndex !== index) return;
         const rect = e.currentTarget.getBoundingClientRect();
-        const x = (e.clientX - rect.left) / rect.width;
-        const y = (e.clientY - rect.top) / rect.height;
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
         setMousePosition({ x, y });
     };
 
@@ -40,7 +40,7 @@ function Features() {
                         FEATURES
                     </p>
                 </div>
-                <div className="ml-3 break-words">
+                <div className="ml-3">
                     <p className="text-5xl font-extrabold">
                         Growth with AURUMM: <br />
                         Your Partner in Success!
@@ -52,38 +52,41 @@ function Features() {
                     {Data.map((item, index) => (
                         <div
                             key={index}
-                            onMouseEnter={() => setHoveredIndex(index)}
-                            onMouseLeave={() => setHoveredIndex(null)}
-                            onMouseMove={(e) => handleMouseMove(e, index)}
-                            onClick={() => setSource(item.img)}
-                            className={`
-                                w-full h-14 border rounded-sm border-[#fff3] 
-                                flex items-center justify-start 
-                                px-4 cursor-pointer 
-                                transition-all duration-300 
-                                ${hoveredIndex === index
-                                    ? 'bg-white/10 text-yellow-200 font-semibold'
-                                    : 'text-white/70 hover:text-white'}
-                            `}
+                            className="relative"
                         >
+                            <div
+                                onMouseEnter={() => setHoveredIndex(index)}
+                                onMouseLeave={() => setHoveredIndex(null)}
+                                onMouseMove={(e) => handleMouseMove(e, index)}
+                                onClick={() => setSource(item.img)}
+                                className={`
+                                    w-full h-14 border rounded-sm border-[#fff3] 
+                                    flex items-center justify-start 
+                                    px-4 cursor-pointer 
+                                    transition-all duration-300 
+                                    ${hoveredIndex === index
+                                        ? 'bg-white/10 text-yellow-200 font-semibold'
+                                        : 'text-white/70 hover:text-white'}
+                                `}
+                            >
+                                <span className="tracking-wider text-xl font-bold">
+                                    {item.name}
+                                </span>
+                            </div>
                             {hoveredIndex === index && (
                                 <div
-                                    className="absolute pointer-events-none z-10"
+                                    className="absolute pointer-events-none"
                                     style={{
-                                        left: `${mousePosition.x * 100}%`,
-                                        top: `${mousePosition.y * 100}%`,
+                                        left: `${mousePosition.x}px`,
+                                        top: `${mousePosition.y}px`,
                                         transform: 'translate(-50%, -50%)',
                                         width: '200px',
                                         height: '200px',
-                                        background:
-                                            'radial-gradient(circle, rgba(255, 255, 100, 0.3) 0%, rgba(255, 255, 100, 0) 70%)',
-                                        filter: 'blur(100px)',
+                                        background: 'radial-gradient(circle, rgba(255, 255, 100, 0.15) 0%, rgba(255, 255, 100, 0) 70%)',
+                                        filter: 'blur(50px)',
                                     }}
                                 />
                             )}
-                            <span className="tracking-wider text-xl font-bold">
-                                {item.name}
-                            </span>
                         </div>
                     ))}
                 </div>

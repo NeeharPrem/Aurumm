@@ -4,7 +4,7 @@ import { ChevronRight,ArrowRight} from 'lucide-react'
 
 function Hero() {
   return (
-      <div className='w-full h-screen p-5 lg:pt-6'>
+      <div className='w-full h-screen flex flex-col justify-center items-center p-5 lg:pt-6'>
           <div
               className="flex flex-col gap-3 items-center justify-center text-7xl font-semibold"
               style={{
