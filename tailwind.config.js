@@ -34,12 +34,28 @@ module.exports = {
             'background-position': 'center bottom',
           },
         },
+        fadeInSlide: {
+          '0%': {
+            opacity: '0',
+            transform: 'translateX(-30px)',
+          },
+          '100%': {
+            opacity: '1',
+            transform: 'translateX(0)',
+          },
+        },
+        'infinite-scroll': {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-100%)' },
+        }
       },
       animation: {
         'fade-in': 'fade-in 0.5s ease-out',
         'slide-in-right': 'slide-in-right 0.5s ease-out',
         'gradient-x': 'gradient-x 15s ease infinite',
         'gradient-y': 'gradient-y 15s ease infinite',
+        fadeInSlide: 'fadeInSlide 1s ease-out',
+        'infinite-scroll': 'infinite-scroll 20s linear infinite',
       },
     },
   },

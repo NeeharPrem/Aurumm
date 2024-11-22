@@ -3,7 +3,7 @@ import React from 'react';
 const Body = () => {
     return (
         <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white p-16">
-            <div className="max-w-6xl mx-auto px-4 pt-8 pb-16 mt-8">
+            <div className="max-w-6xl mx-auto px-4 pt-8 pb-14 mt-8">
                 <h1 className="text-4xl md:text-5xl font-bold text-navy-900 mb-4">
                     See how Aurumm can transform your jewelry business
                 </h1>
@@ -12,8 +12,8 @@ const Body = () => {
                 </p>
             </div>
             <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row gap-12 pb-16">
-                <div className="md:w-2/3 bg-white rounded-xl shadow-lg p-8">
-                    <h4 className=''>Contact US</h4>
+                <div className="md:w-2/3 bg-white rounded-xl shadow-lg p-7">
+                    <p className='text-3xl font-bold pb-3'>Contact US</p>
                     <form className="space-y-6">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>

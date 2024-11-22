@@ -22,13 +22,18 @@ function Header() {
         <div className="fixed top-0 left-0 w-full bg-white/30 backdrop-blur-md shadow-lg z-50 text-xl p-4">
             <div className="flex flex-row justify-between items-center px-2 pt-2">
                 <div>
-                    <p onClick={() => navigate('/')} className='text-3xl font-extrabold cursor-pointer'>Aurumm</p>
+                    <p
+                        onClick={() => navigate('/')}
+                        className="text-3xl font-extrabold cursor-pointer animate-fadeInSlide"
+                    >
+                        Aurumm
+                    </p>
                     {/* <img onClick={() => navigate('/')} src={logo} /> */}
                 </div>
 
                 <div className="flex flex-row gap-5 items-center relative">
                     <NavItem>
-                        <p className="cursor-pointer hover:text-gray-500">Home</p>
+                        <p onClick={()=>navigate('/')} className="cursor-pointer hover:text-gray-500">Home</p>
                     </NavItem>
 
                     <div

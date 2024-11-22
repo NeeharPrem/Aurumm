@@ -21,9 +21,6 @@ function Hero({ title = null, head, typewriter, final = null }) {
             <div className="relative z-10">
                 <div
                     className="flex flex-col gap-3 items-center justify-center text-7xl font-semibold p-8 rounded-xl"
-                    // style={{
-                    //     backgroundColor: 'rgba(255, 255, 255, 0.1)',
-                    // }}
                 >
                     {title && (
                         <div className="items-start w-full">
@@ -32,7 +29,7 @@ function Hero({ title = null, head, typewriter, final = null }) {
                             </div>
                         </div>
                     )}
-                    <p className="text-white text-4xl md:text-6xl lg:text-7xl drop-shadow-xl font-semibold tracking-widest text-center">{head}</p>
+                    <p className="text-white text-4xl md:text-6xl lg:text-6xl drop-shadow-xl font-semibold tracking-widest text-center">{head}</p>
                     <div className="text-2xl md:text-4xl lg:text-5xl text-white drop-shadow-2xl font-light tracking-wide text-center">
                         <Typewriter
                             options={{
