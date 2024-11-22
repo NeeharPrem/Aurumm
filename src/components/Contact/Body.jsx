@@ -1,4 +1,5 @@
 import React from 'react';
+import { Instagram, Facebook } from 'lucide-react'
 
 const Body = () => {
     return (
@@ -81,36 +82,6 @@ const Body = () => {
                 </div>
                 <div className="md:w-1/3 space-y-8">
                     <div className="bg-white rounded-xl shadow-lg p-6">
-                        <h3 className="text-xl font-semibold mb-4">Why Choose Aurumm?</h3>
-                        <div className="space-y-4">
-                            <div className="flex items-center gap-3">
-                                <div className="h-10 w-10 bg-blue-100 rounded-full flex items-center justify-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                                    </svg>
-                                </div>
-                                <p className="text-gray-600">World-class technical solutions</p>
-                            </div>
-                            <div className="flex items-center gap-3">
-                                <div className="h-10 w-10 bg-blue-100 rounded-full flex items-center justify-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                                    </svg>
-                                </div>
-                                <p className="text-gray-600">Secure payment solutions</p>
-                            </div>
-                            <div className="flex items-center gap-3">
-                                <div className="h-10 w-10 bg-blue-100 rounded-full flex items-center justify-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                                    </svg>
-                                </div>
-                                <p className="text-gray-600">Fast implementation</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="bg-white rounded-xl shadow-lg p-6">
                         <h3 className="text-xl font-semibold mb-4">Contact Details</h3>
                         <div className="space-y-3">
                             <p className="text-gray-600">
@@ -118,6 +89,19 @@ const Body = () => {
                             </p>
                             <p className="text-gray-600">
                                 <span className="font-medium">Phone:</span> 0422 4957575
+                            </p>
+                        </div>
+                    </div>
+                    <div className="bg-white rounded-xl shadow-lg p-6">
+                        <h3 className="text-xl font-semibold mb-4">Socials</h3>
+                        <div className="space-y-3">
+                            <p onClick={() => window.open('https://www.instagram.com/aurumm_serv_soft/', '_blank')} className="text-gray-600 flex flex-row gap-2 hover:cursor-pointer">
+                                <span><Instagram/></span>
+                                <span className="font-medium">Instgram</span>
+                            </p>
+                            <p onClick={() => window.open('https://www.facebook.com/profile.php?id=61558187474609', '_blank')} className="text-gray-600 flex flex-row gap-2 hover:cursor-pointer">
+                                <span><Facebook/></span>
+                                <span className="font-medium">Facebook</span>
                             </p>
                         </div>
                     </div>
