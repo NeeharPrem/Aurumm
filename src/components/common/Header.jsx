@@ -46,15 +46,15 @@ function Header() {
                         </NavItem>
 
                         {Dropdown && (
-                            <div className="absolute top-full text-white left-0 mt-2 bg-black shadow-lg rounded-lg py-2 w-48 p-3">
+                            <div className="absolute top-full text-center text-white left-0 mt-4 bg-black/90 shadow-2xl rounded-xl py-3 px-3 w-56 border border-white/10">
                                 <p
                                     onClick={() => navigate('/aupay')}
-                                    className="px-4 py-2 hover:bg-white/30 cursor-pointer"
+                                    className="px-4 py-2 text-sm hover:bg-white/30  hover:rounded-lg cursor-pointer"
                                 >
-                                    AuPay
+                                    AU Pay
                                 </p>
-                                <p className="px-4 py-2 hover:bg-white/30 cursor-pointer">AuSales</p>
-                                <p className="px-4 py-2 hover:bg-white/30 cursor-pointer">AuShop</p>
+                                <p className="px-4 py-2 text-sm hover:bg-white/30 hover:rounded-lg cursor-pointer">AU Sales</p>
+                                <p className="px-4 py-2 text-sm hover:bg-white/30 hover:rounded-lg cursor-pointer">AU Shop</p>
                             </div>
                         )}
                     </div>
