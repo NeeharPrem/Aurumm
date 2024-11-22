@@ -55,7 +55,7 @@ function Header() {
                     </div>
 
                     <NavItem>
-                        <p className="cursor-pointer hover:text-gray-500">Contact</p>
+                        <p onClick={()=>navigate('/contactus')} className="cursor-pointer hover:text-gray-500">Contact</p>
                     </NavItem>
 
                     <button className="bg-black text-white rounded-full hover:rounded-l-full hover:rounded-br-none px-4 py-2 transition-all duration-200">
